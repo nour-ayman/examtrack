@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Daydream';
-  src: url('/fonts/Daydream.otf') format('opentype');
-  font-display: swap;
+  font-family: 'Minecraftia';
+  src: url('./assets/Minecraftia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 .font-pixel {
-  font-family: 'Daydream', monospace, sans-serif;
+  font-family: 'Minecraftia', monospace !important;
 }
 
 .pixelated {
@@ -28,6 +30,10 @@
 
 .animate-cloud-slow {
   animation: cloudDrift 30s linear infinite;
+}
+
+.animate-cloud-mid {
+  animation: cloudDrift 22s linear infinite;
 }
 
 .animate-cloud-fast {
