@@ -1,19 +1,28 @@
-# 📅 Midterm Finder (ExamTrack)
+# 🦆 ExamTrack - Midterm Exam Lookup Dashboard
 
-A clean, responsive web application that turns chaotic university midterm Excel sheets into an instant, personalized exam schedule. 
+A high-performance, mobile-first web dashboard designed for university students to quickly search and look up midterm exam schedules (dates, timings, and exam halls) by simply entering their Student ID.
 
-Students simply enter their **Student ID** to get a clean timeline of all their upcoming exams, dates, times, and exam halls/rooms—no more manual searching through massive spreadsheets.
+Built with a custom retro **Pixel Art** aesthetic featuring the animated dancing wezza mascot, pixelated cloud animations, and dithered gradient styling.
 
-## 🚀 Key Features
-- **Instant Search:** Real-time lookup by Student ID with zero latency.
-- **Personalized Schedule:** Displays only the exams relevant to the student.
-- **Hall & Seat Details:** Shows subject name, exam date, time slot, and assigned room/hall.
-- **Mobile Friendly:** Fully responsive UI designed for quick checks right outside the exam room.
-- **No Backend Overhead:** Parses and serves schedule data directly on the client side for maximum speed and uptime.
+---
 
-## 🛠️ Tech Stack
-- **Framework:** React.js + Vite
-- **Styling:** Tailwind CSS
-- **Data Parsing:** SheetJS (xlsx) / Static JSON
-- **Icons:** Lucide React
-- **Deployment:** Vercel / Netlify
+## 🚀 Tech Stack
+
+- **Framework:** React 18 + Vite
+- **Styling:** Tailwind CSS (Retro pixel-art theme & custom keyframe animations)
+- **Data Engine:** Client-side parsing using SheetJS (`xlsx`)
+- **Icons:** Lucide React & Custom Pixel SVGs
+
+---
+
+## 🎨 UI/UX & Design
+
+- **Design & Assets:** Designed by Haneen on Adobe Illustrator/Photoshop.
+- **Visual Theme:** Retro 8-bit aesthetic, sky blue palette (`#B4D7EB`), dithered gradient textures, and animated pixel mascot.
+
+---
+
+## 🛠️ Project Structure
+
+```text
+not now...
