@@ -87,14 +87,13 @@ export default function ScheduleBlockMobile({ exam, index = 1 }) {
 
         {/* Column 3: Location */}
         <div className="flex flex-col justify-center overflow-visible">
-            <span className="text-[8px] sm:text-[9px] text-gray-400 tracking-wider uppercase leading-none mb-1.5">
+        <span className="text-[8px] sm:text-[9px] text-gray-400 tracking-wider uppercase leading-none mb-1">
             LOCATION
-            </span>
-            <span className="text-[10px] sm:text-[11px] font-bold text-black tracking-wide leading-normal pt-1 truncate">
+        </span>
+        <span className="text-[8.5px] sm:text-[9.5px] font-bold text-black tracking-tight leading-[1.15] pt-1 break-words line-clamp-2">
             {exam?.facilityType || 'Campus'}
-            </span>
+        </span>
         </div>
-
         {/* Column 4: Room No. */}
         <div className="flex flex-col justify-center overflow-visible">
             <span className="text-[8px] sm:text-[9px] text-gray-400 tracking-wider uppercase leading-none mb-1.5">
