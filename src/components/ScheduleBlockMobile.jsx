@@ -55,7 +55,7 @@ export default function ScheduleBlockMobile({ exam, index = 1 }) {
             <span className="text-[8px] sm:text-[9px] text-gray-400 tracking-wider uppercase leading-none mb-1.5">
             COURSE CODE
             </span>
-            <span className="text-[11px] sm:text-xs font-bold text-black tracking-wide leading-normal pt-1 truncate">
+            <span className="text-[9.5px] sm:text-[10.5px] font-bold text-black tracking-tight leading-normal pt-1 truncate -translate-y-[5px]">
             {exam?.subject || 'Subject'}
             </span>
         </div>
