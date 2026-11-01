@@ -24,7 +24,7 @@ export default function ScheduleScreen({ studentId, exams = [], onBack }) {
         <div className="shrink-0 flex items-center justify-between px-2 mb-2">
           
         {/* Top Info (3al shemal) */}
-          <div className="flex flex-col -translate-x-[250px] -translate-y-[55px]">
+          <div className="flex flex-col -translate-x-[50px] -translate-y-[40px]">
             <h2 className="text-xl sm:text-2xl font-bold text-black tracking-wide leading-tight">
               schedule found!
             </h2>

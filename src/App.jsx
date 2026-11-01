@@ -2,13 +2,26 @@ import { useState, useEffect } from 'react';
 import BackgroundClouds from './components/BackgroundClouds';
 import LoadingScreen from './components/LoadingScreen';
 import SearchScreen from './components/SearchScreen';
+import SearchScreenMobile from './components/SearchScreenMobile';
 import ScheduleScreen from './components/ScheduleScreen';
+import ScheduleScreenMobile from './components/ScheduleScreenMobile';
 import NotFoundScreen from './components/NotFoundScreen';
 import { getStudentSchedule } from './utils/scheduleService';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  
+
+  // Detection le shashet el mobile (< 768px)
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Navigation states: 'search' | 'schedule' | 'not-found'
   const [currentScreen, setCurrentScreen] = useState('search');
   const [studentId, setStudentId] = useState('');
@@ -70,17 +83,29 @@ export default function App() {
             </div>
           )}
 
-          {/* 3. El Screens hasab el state */}
+          {/* 3. El Screens hasab el state wel device */}
           {currentScreen === 'search' && (
-            <SearchScreen onSearch={handleSearch} />
+            isMobile ? (
+              <SearchScreenMobile onSearch={handleSearch} />
+            ) : (
+              <SearchScreen onSearch={handleSearch} />
+            )
           )}
 
           {currentScreen === 'schedule' && (
-            <ScheduleScreen 
-              studentId={studentId} 
-              exams={exams} 
-              onBack={handleBackToSearch} 
-            />
+            isMobile ? (
+              <ScheduleScreenMobile 
+                studentId={studentId} 
+                exams={exams} 
+                onBack={handleBackToSearch} 
+              />
+            ) : (
+              <ScheduleScreen 
+                studentId={studentId} 
+                exams={exams} 
+                onBack={handleBackToSearch} 
+              />
+            )
           )}
 
           {currentScreen === 'not-found' && (

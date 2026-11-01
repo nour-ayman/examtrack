@@ -46,13 +46,13 @@ export default function SearchScreen({ onSearch }) {
       {/* 2. Center: Title + Search Bar + Info Note + Button */}
       <div className="flex flex-col items-center justify-center w-full max-w-[940px] px-4 -mt-6 sm:-mt-8">
         
-        {/* Title */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl text-black font-bold tracking-wider mb-2 select-none text-center translate-y-[190px]">
+        {/* Title: 3addel translate-x aw translate-y hena */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-black font-bold tracking-wider mb-2 select-none text-center -translate-x-[0px] translate-y-[150px]">
           Enter your ID
         </h1>
 
-        {/* Search Bar Frame */}
-        <div className="relative w-full h-auto flex items-center justify-center">
+        {/* Search Bar Frame: 3addel translate-x aw translate-y hena */}
+        <div className="relative w-full h-auto flex items-center justify-center -translate-x-[0px] -translate-y-[0px]">
           <img 
             src={searchBarImg} 
             alt="Search Bar" 
@@ -71,14 +71,14 @@ export default function SearchScreen({ onSearch }) {
           />
         </div>
 
-        {/* Button: Ma2as mazboot b-hitbox mahsoor 3ala ad el sora */}
+        {/* Button: 3addel translate-x aw translate-y hena */}
         <div 
           onClick={handleSubmit}
           onMouseEnter={() => setBtnState('hover')}
           onMouseLeave={() => setBtnState('normal')}
           onMouseDown={() => setBtnState('active')}
           onMouseUp={() => setBtnState('hover')}
-          className="relative cursor-pointer select-none mt-6 w-[260px] sm:w-[380px] flex items-center justify-center shrink-0 -translate-y-[170px]"
+          className="relative cursor-pointer select-none mt-6 w-[260px] sm:w-[380px] flex items-center justify-center shrink-0 -translate-x-[0px] -translate-y-[170px]"
         >
           <img 
             src={getBtnSrc()} 
@@ -97,7 +97,7 @@ export default function SearchScreen({ onSearch }) {
         </div>
 
         {/* Info Note: Icon + Text */}
-        <div className="flex items-center justify-center gap-2 -translate-y-[320px] select-none pointer-events-none opacity-60">
+        <div className="flex items-center justify-center gap-2 -translate-x-[0px] -translate-y-[320px] select-none pointer-events-none opacity-60">
           <img 
             src={infoIcon} 
             alt="Info" 
