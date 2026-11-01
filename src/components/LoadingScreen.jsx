@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import LogoImg from '../assets/Logo.png';
+import LogoImg from '../assets/Logo.svg';
 import wezzaGif from '../assets/wezza.gif';
 
 export default function LoadingScreen() {
@@ -23,7 +23,7 @@ export default function LoadingScreen() {
       />
 
       {/* Wezza marfoo3a le fo2 direct ta7t el logo */}
-      <div className="flex flex-col items-center -mt-4 sm:-mt-6">
+      <div className="flex flex-col items-center mt-10 sm:mt-14">
         <img 
           src={wezzaGif} 
           alt="Dancing Wezza" 

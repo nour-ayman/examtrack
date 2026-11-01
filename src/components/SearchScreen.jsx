@@ -1,10 +1,7 @@
 import { useState } from 'react';
 
-// Sowar el logo SVG wel mascot
-import logoNormal from '../assets/Logo.svg';
-import logoCursor from '../assets/Logo - cursor.svg';
-import logoClicked from '../assets/logo - clicked.svg';
-import mascotHead from '../assets/mascot head.png';
+// Reusable Header Component
+import Header from './Header';
 
 // Soret el search bar
 import searchBarImg from '../assets/search bar.png';
@@ -19,30 +16,7 @@ import infoIcon from '../assets/info.png';
 
 export default function SearchScreen({ onSearch }) {
   const [studentId, setStudentId] = useState('');
-  const [logoState, setLogoState] = useState('normal');
   const [btnState, setBtnState] = useState('normal');
-
-  // Config el logo w el mascot
-  const getLogoConfig = () => {
-    if (logoState === 'active') {
-      return {
-        src: logoClicked,
-        className: 'h-[36px] sm:h-[40px]',
-      };
-    }
-    if (logoState === 'hover') {
-      return {
-        src: logoCursor,
-        className: 'h-[38px] sm:h-[42px]',
-      };
-    }
-    return {
-      src: logoNormal,
-      className: 'h-[30px] sm:h-[24px]',
-    };
-  };
-
-  const currentLogo = getLogoConfig();
 
   // Sora el zorrar hasab el state
   const getBtnSrc = () => {
@@ -66,34 +40,10 @@ export default function SearchScreen({ onSearch }) {
   return (
     <div className="relative z-10 w-full h-full flex flex-col justify-between items-center select-none font-pixel pointer-events-auto px-4 py-4">
       
-      {/* 1. Header: Logo + Mascot */}
-      <div className="w-full flex justify-end items-center pt-3 sm:pt-4 pr-4 sm:pr-8">
-        <div 
-          className="flex items-center gap-2 cursor-pointer select-none"
-          onMouseEnter={() => setLogoState('hover')}
-          onMouseLeave={() => setLogoState('normal')}
-          onMouseDown={() => setLogoState('active')}
-          onMouseUp={() => setLogoState('hover')}
-        >
-          <div className="flex items-center justify-center">
-            <img 
-              src={currentLogo.src} 
-              alt="ExamTrack Logo" 
-              className={`${currentLogo.className} w-auto pixelated object-contain block`} 
-            />
-          </div>
+      {/* 1. Reusable Header */}
+      <Header />
 
-          <div className="w-[60px] sm:w-[54px] h-[50px] sm:h-[64px] flex items-center justify-center shrink-0">
-            <img 
-              src={mascotHead} 
-              alt="Mascot Head" 
-              className="w-full h-full pixelated object-contain block" 
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Center: Title + Search Bar + Button */}
+      {/* 2. Center: Title + Search Bar + Info Note + Button */}
       <div className="flex flex-col items-center justify-center w-full max-w-[940px] px-4 -mt-6 sm:-mt-8">
         
         {/* Title */}
@@ -157,6 +107,7 @@ export default function SearchScreen({ onSearch }) {
             Your ID is only used to find your schedule
           </span>
         </div>
+
       </div>
 
       {/* Bottom Spacer */}
